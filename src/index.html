@@ -1,0 +1,633 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+        <!-- styles -->
+        <link rel="stylesheet" href="css/font-awesome.min.css" />
+        <link rel="stylesheet" href="css/bootstrap.css" />
+        <link rel="stylesheet" href="css/index.css" />
+
+        <title>Document</title>
+    </head>
+    <body>
+        <!-- top navigation -->
+        <nav class="navbar navbar-dark bg-teal fixed-top pb-0">
+            <!-- website logo and title -->
+            <a class="navbar-brand mr-auto" href="#">
+                <img
+                    src="assets/ubuntu.png"
+                    width="50"
+                    height="50"
+                    class="d-inline-block align-center"
+                    alt="logo"
+                    loading="lazy"
+                />
+                MyWebsite
+            </a>
+
+            <!-- sign up, sign in and profile links -->
+            <div class="auth-btns mr-3">
+                <div class="not-authenticated">
+                    <a href="#" class="sign-up btn btn-link text-light">
+                        Sign Up
+                    </a>
+
+                    <a href="#" class="sign-in btn btn-sm btn-outline-light">
+                        Sign In
+                    </a>
+                </div>
+                <div class="authenticated">
+                    <a href="#" class="profile text-decoration-none">
+                        <img src="assets/avatar.png" alt="user_avatar" />
+                        <span class="text-light">
+                            Username
+                        </span>
+                    </a>
+
+                    <a href="#" class="sign-out btn btn-sm btn-outline-light">
+                        Sign Out
+                    </a>
+                </div>
+            </div>
+
+            <!-- topnav control button -->
+            <button
+                class="navbar-toggler"
+                type="button"
+                data-toggle="collapse"
+                data-target="#navbarSupportedContent"
+                aria-controls="navbarSupportedContent"
+                aria-expanded="false"
+                aria-label="Toggle navigation"
+            >
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <!-- utility for navbar padding bottom -->
+            <div class="spacer-1"></div>
+
+            <!-- topnav button controls this collapse menu -->
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <div class="d-flex">
+                    <!-- sign up, sign in and profile links -->
+                    <div class="auth-btns mx-auto mb-3">
+                        <div class="not-authenticated">
+                            <a href="#" class="sign-up btn btn-link text-light">
+                                Sign Up
+                            </a>
+
+                            <a
+                                href="#"
+                                class="sign-in btn btn-sm btn-outline-light"
+                            >
+                                Sign In
+                            </a>
+                        </div>
+                        <div class="authenticated">
+                            <a href="#" class="profile text-decoration-none">
+                                <img
+                                    src="assets/avatar.png"
+                                    alt="user_avatar"
+                                />
+                                <span class="text-light">
+                                    Username
+                                </span>
+                            </a>
+
+                            <a
+                                href="#"
+                                class="sign-out btn btn-sm btn-outline-light"
+                            >
+                                Sign Out
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- navbar links -->
+                    <ul class="navbar-nav flex-row mr-auto">
+                        <li class="nav-item active">
+                            <a class="nav-link" href="#">
+                                Home
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">
+                                About
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">
+                                Tutorials
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">
+                                Forum
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">
+                                Games
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">
+                                Shop
+                            </a>
+                        </li>
+                    </ul>
+
+                    <!-- search form -->
+                    <form class="form-inline my-2 position-relative">
+                        <input
+                            class="form-control"
+                            type="search"
+                            placeholder="Search"
+                            aria-label="Search"
+                        />
+                        <button
+                            class="btn my-2 my-sm-0 position-absolute"
+                            type="submit"
+                        >
+                            <i class="fa fa-search"></i>
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </nav>
+
+        <!-- side navigation -->
+        <div id="sidebar">
+            <nav class="sidebar">
+                <button class="btn btn-primary sidebar-toggler">
+                    <i class="fa fa-angle-double-right"></i>
+                </button>
+            </nav>
+        </div>
+        <!-- side navigation content overlay -->
+        <div class="overlay"></div>
+
+        <!-- site banner -->
+        <div class="banner"></div>
+
+        <!-- main section -->
+        <div class="container my-5">
+            <!-- section title -->
+            <h1 class="section-title mb-5">
+                Recent Posts
+                <hr />
+            </h1>
+
+            <!-- posts -->
+            <div id="posts">
+                <div class="row">
+                    <div class="col">
+                        <!-- first post -->
+                        <div class="card mb-5 text-justify">
+                            <div class="row no-gutters">
+                                <!-- post thumbnail -->
+                                <div class="col-md-5 col-lg-3">
+                                    <img
+                                        src="assets/placeholder.png"
+                                        class="card-img"
+                                        alt="placeholder"
+                                    />
+                                </div>
+                                <!-- post details -->
+                                <div class="col-md-7 col-lg-9">
+                                    <div class="card-body text-justify">
+                                        <!-- post title -->
+                                        <h5 class="card-title">
+                                            Lorem ipsum dolor sit amet
+                                            consectetur adipisicing elit. Rerum,
+                                            quasi!...
+                                        </h5>
+                                        <!-- post content -->
+                                        <p class="card-text">
+                                            Lorem ipsum dolor sit amet
+                                            consectetur adipisicing elit. Quidem
+                                            cum provident eum ullam iusto
+                                            maiores voluptas fuga delectus
+                                            consequatur. Cumque?...
+                                        </p>
+                                        <!-- post info and post modify buttons -->
+                                        <p
+                                            class="post_info_modify_btns clearfix"
+                                        >
+                                            <small
+                                                class="post-info text-muted float-left"
+                                            >
+                                                Last updated 53 mins ago
+                                                <span class="dot"></span>
+                                                By
+                                                <a
+                                                    href="#"
+                                                    class="text-decoration-none text-muted"
+                                                >
+                                                    Admin
+                                                </a>
+                                            </small>
+                                            <span
+                                                class="modify-btns float-right"
+                                            >
+                                                <a
+                                                    href="#"
+                                                    class="btn btn-outline-warning btn-sm rounded-circle"
+                                                >
+                                                    <i
+                                                        class="fa fa-thumb-tack"
+                                                    ></i>
+                                                </a>
+                                                <a
+                                                    href="#"
+                                                    class="btn btn-outline-success btn-sm rounded-circle"
+                                                >
+                                                    <i class="fa fa-pencil"></i>
+                                                </a>
+                                                <a
+                                                    href="#"
+                                                    class="btn btn-outline-danger btn-sm rounded-circle"
+                                                >
+                                                    <i class="fa fa-trash"></i>
+                                                </a>
+                                            </span>
+                                        </p>
+                                        <!-- read more link and category images -->
+                                        <div
+                                            class="read_more_category_badges clearfix"
+                                        >
+                                            <a
+                                                href="#"
+                                                class="read-more btn btn-outline-info float-left"
+                                            >
+                                                Read More
+                                            </a>
+                                            <span
+                                                class="category-badges mt-2 float-right"
+                                            >
+                                                <img
+                                                    src="assets/django.png"
+                                                    width="20"
+                                                    alt="django"
+                                                />
+                                                <img
+                                                    src="assets/react.png"
+                                                    width="20"
+                                                    alt="react"
+                                                />
+                                                <img
+                                                    src="assets/postgresql.png"
+                                                    width="20"
+                                                    alt="postgresql.png"
+                                                />
+                                            </span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- second post -->
+                        <div class="card mb-5 text-justify">
+                            <div class="row no-gutters">
+                                <!-- post thumbnail -->
+                                <div class="col-md-5 col-lg-3">
+                                    <img
+                                        src="assets/placeholder.png"
+                                        class="card-img"
+                                        alt="placeholder"
+                                    />
+                                </div>
+                                <!-- post details -->
+                                <div class="col-md-7 col-lg-9">
+                                    <div class="card-body text-justify">
+                                        <!-- post title -->
+                                        <h5 class="card-title">
+                                            Lorem ipsum dolor sit amet
+                                            consectetur adipisicing elit. Rerum,
+                                            quasi!...
+                                        </h5>
+                                        <!-- post content -->
+                                        <p class="card-text">
+                                            Lorem ipsum dolor sit amet
+                                            consectetur adipisicing elit. Quidem
+                                            cum provident eum ullam iusto
+                                            maiores voluptas fuga delectus
+                                            consequatur. Cumque?...
+                                        </p>
+                                        <!-- post info and post modify buttons -->
+                                        <p
+                                            class="post_info_modify_btns clearfix"
+                                        >
+                                            <small
+                                                class="post-info text-muted float-left"
+                                            >
+                                                Last updated 53 mins ago
+                                                <span class="dot"></span>
+                                                By
+                                                <a
+                                                    href="#"
+                                                    class="text-decoration-none text-muted"
+                                                >
+                                                    Admin
+                                                </a>
+                                            </small>
+                                            <span
+                                                class="modify-btns float-right"
+                                            >
+                                                <a
+                                                    href="#"
+                                                    class="btn btn-outline-warning btn-sm rounded-circle"
+                                                >
+                                                    <i
+                                                        class="fa fa-thumb-tack"
+                                                    ></i>
+                                                </a>
+                                                <a
+                                                    href="#"
+                                                    class="btn btn-outline-success btn-sm rounded-circle"
+                                                >
+                                                    <i class="fa fa-pencil"></i>
+                                                </a>
+                                                <a
+                                                    href="#"
+                                                    class="btn btn-outline-danger btn-sm rounded-circle"
+                                                >
+                                                    <i class="fa fa-trash"></i>
+                                                </a>
+                                            </span>
+                                        </p>
+                                        <!-- read more link and category images -->
+                                        <div
+                                            class="read_more_category_badges clearfix"
+                                        >
+                                            <a
+                                                href="#"
+                                                class="read-more btn btn-outline-info float-left"
+                                            >
+                                                Read More
+                                            </a>
+                                            <span
+                                                class="category-badges mt-2 float-right"
+                                            >
+                                                <img
+                                                    src="assets/django.png"
+                                                    width="20"
+                                                    alt="django"
+                                                />
+                                                <img
+                                                    src="assets/react.png"
+                                                    width="20"
+                                                    alt="react"
+                                                />
+                                                <img
+                                                    src="assets/postgresql.png"
+                                                    width="20"
+                                                    alt="postgresql.png"
+                                                />
+                                            </span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- see all posts link -->
+            <a href="#" class="d-block text-center my-5">
+                See All Posts
+                <i class="fa fa-angle-right"></i>
+            </a>
+
+            <!-- section title -->
+            <h1 class="section-title mb-5">
+                Recent Videos
+                <hr />
+            </h1>
+
+            <!-- videos -->
+            <div id="videos">
+                <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3">
+                    <!-- first video -->
+                    <div class="col mb-5">
+                        <div class="card text-justify">
+                            <a
+                                href="#"
+                                class="text-decoration-none text-dark goto-video"
+                            >
+                                <!-- video thumbnail -->
+                                <img
+                                    src="assets/placeholder.png"
+                                    class="card-img-top"
+                                    alt="placeholder"
+                                />
+
+                                <!-- video body -->
+                                <div class="card-body text-justify">
+                                    <!-- video title -->
+                                    <p class="card-title">
+                                        Lorem ipsum dolor sit amet consectetur
+                                        adipisicing elit. Veniam, officiis?...
+                                    </p>
+                                </div>
+                            </a>
+                            <div class="text-center mb-3">
+                                <a
+                                    href="#"
+                                    class="btn btn-outline-info btn-sm rounded-circle"
+                                >
+                                    <i class="fa fa-plus"></i>
+                                </a>
+                                <a
+                                    href="#"
+                                    class="btn btn-outline-success btn-sm rounded-circle"
+                                >
+                                    <i class="fa fa-pencil"></i>
+                                </a>
+                                <a
+                                    href="#"
+                                    class="btn btn-outline-danger btn-sm rounded-circle"
+                                >
+                                    <i class="fa fa-trash"></i>
+                                </a>
+                            </div>
+                            <a
+                                href="#"
+                                class="btn btn-light btn-block text-muted"
+                            >
+                                View Full Playlist
+                            </a>
+                        </div>
+                    </div>
+                    <!-- second video -->
+                    <div class="col mb-5">
+                        <div class="card text-justify">
+                            <a
+                                href="#"
+                                class="text-decoration-none text-dark goto-video"
+                            >
+                                <!-- video thumbnail -->
+                                <img
+                                    src="assets/placeholder.png"
+                                    class="card-img-top"
+                                    alt="placeholder"
+                                />
+
+                                <!-- video body -->
+                                <div class="card-body text-justify">
+                                    <!-- video title -->
+                                    <p class="card-title">
+                                        Lorem ipsum dolor sit amet consectetur
+                                        adipisicing elit. Veniam, officiis?...
+                                    </p>
+                                </div>
+                            </a>
+                            <div class="text-center mb-3">
+                                <a
+                                    href="#"
+                                    class="btn btn-outline-info btn-sm rounded-circle"
+                                >
+                                    <i class="fa fa-plus"></i>
+                                </a>
+                                <a
+                                    href="#"
+                                    class="btn btn-outline-success btn-sm rounded-circle"
+                                >
+                                    <i class="fa fa-pencil"></i>
+                                </a>
+                                <a
+                                    href="#"
+                                    class="btn btn-outline-danger btn-sm rounded-circle"
+                                >
+                                    <i class="fa fa-trash"></i>
+                                </a>
+                            </div>
+                            <a
+                                href="#"
+                                class="btn btn-light btn-block text-muted"
+                            >
+                                View Full Playlist
+                            </a>
+                        </div>
+                    </div>
+                    <!-- third video -->
+                    <div class="col mb-5">
+                        <div class="card text-justify">
+                            <a
+                                href="#"
+                                class="text-decoration-none text-dark goto-video"
+                            >
+                                <!-- video thumbnail -->
+                                <img
+                                    src="assets/placeholder.png"
+                                    class="card-img-top"
+                                    alt="placeholder"
+                                />
+
+                                <!-- video body -->
+                                <div class="card-body text-justify">
+                                    <!-- video title -->
+                                    <p class="card-title">
+                                        Lorem ipsum dolor sit amet consectetur
+                                        adipisicing elit. Veniam, officiis?...
+                                    </p>
+                                </div>
+                            </a>
+                            <div class="text-center mb-3">
+                                <a
+                                    href="#"
+                                    class="btn btn-outline-info btn-sm rounded-circle"
+                                >
+                                    <i class="fa fa-plus"></i>
+                                </a>
+                                <a
+                                    href="#"
+                                    class="btn btn-outline-success btn-sm rounded-circle"
+                                >
+                                    <i class="fa fa-pencil"></i>
+                                </a>
+                                <a
+                                    href="#"
+                                    class="btn btn-outline-danger btn-sm rounded-circle"
+                                >
+                                    <i class="fa fa-trash"></i>
+                                </a>
+                            </div>
+                            <a
+                                href="#"
+                                class="btn btn-light btn-block text-muted"
+                            >
+                                View Full Playlist
+                            </a>
+                        </div>
+                    </div>
+                    <!-- fourth video -->
+                    <div class="col mb-5">
+                        <div class="card text-justify">
+                            <a
+                                href="#"
+                                class="text-decoration-none text-dark goto-video"
+                            >
+                                <!-- video thumbnail -->
+                                <img
+                                    src="assets/placeholder.png"
+                                    class="card-img-top"
+                                    alt="placeholder"
+                                />
+
+                                <!-- video body -->
+                                <div class="card-body text-justify">
+                                    <!-- video title -->
+                                    <p class="card-title">
+                                        Lorem ipsum dolor sit amet consectetur
+                                        adipisicing elit. Veniam, officiis?...
+                                    </p>
+                                </div>
+                            </a>
+                            <div class="text-center mb-3">
+                                <a
+                                    href="#"
+                                    class="btn btn-outline-info btn-sm rounded-circle"
+                                >
+                                    <i class="fa fa-plus"></i>
+                                </a>
+                                <a
+                                    href="#"
+                                    class="btn btn-outline-success btn-sm rounded-circle"
+                                >
+                                    <i class="fa fa-pencil"></i>
+                                </a>
+                                <a
+                                    href="#"
+                                    class="btn btn-outline-danger btn-sm rounded-circle"
+                                >
+                                    <i class="fa fa-trash"></i>
+                                </a>
+                            </div>
+                            <a
+                                href="#"
+                                class="btn btn-light btn-block text-muted"
+                            >
+                                View Full Playlist
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- see all videos link -->
+            <a href="#" class="d-block text-center my-5">
+                See All Videos
+                <i class="fa fa-angle-right"></i>
+            </a>
+        </div>
+        <!-- scripts -->
+        <script src="js/jquery.min.js"></script>
+        <script src="js/popper.js"></script>
+        <script src="js/bootstrap.min.js"></script>
+        <script src="js/app.js"></script>
+    </body>
+</html>

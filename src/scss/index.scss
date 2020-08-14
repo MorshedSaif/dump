@@ -1,0 +1,362 @@
+// COLORS
+$color-white: #f8f9fa;
+$color-black: #000;
+$color-dot: #bbb;
+$color-teal: teal;
+$color-profile-hover: rgba(0, 120, 120, 0.8);
+$color-search-form-focus: rgba(248, 249, 250, 0.5);
+$color-overlay: rgba(0, 0, 0, 0.5);
+
+// UTILITIES
+.spacer-1 {
+    width: 100%;
+    height: 0.5rem;
+}
+
+.spacer-2 {
+    width: 100%;
+    height: 2rem;
+}
+
+// TOP NAVIGATION
+.bg-teal {
+    background-color: $color-teal;
+}
+
+nav.navbar {
+    .auth-btns {
+        .not-authenticated {
+            display: none;
+
+            .sign-up {
+                &:focus {
+                    box-shadow: none;
+                    color: $color-white !important;
+                }
+
+                &:hover {
+                    color: $color-white !important;
+                }
+            }
+
+            .sign-in {
+                &:hover {
+                    color: $color-teal;
+                }
+            }
+        }
+
+        .authenticated {
+            // display: none;
+
+            .profile {
+                display: inline-block;
+                padding: 0.3rem 0.5rem;
+
+                &:hover {
+                    background-color: $color-profile-hover;
+                }
+
+                img {
+                    width: 35px;
+                    height: 35px;
+                    border-radius: 50%;
+                    margin-right: 0.3rem;
+                }
+            }
+
+            .sign-out {
+                margin-left: 0.3rem;
+
+                &:hover {
+                    color: $color-teal;
+                }
+            }
+        }
+    }
+
+    .navbar-collapse {
+        .d-flex {
+            .auth-btns {
+                display: none;
+            }
+        }
+
+        ul.navbar-nav {
+            li.nav-item {
+                padding: 0.3rem 1rem;
+
+                &.active {
+                    border-bottom: 2px solid $color-white;
+                }
+            }
+        }
+
+        form {
+            input.form-control {
+                padding-left: 2.5rem;
+                border-bottom: 0;
+                border-right: 0;
+                border-top: 0;
+
+                &:focus {
+                    border-color: $color-white;
+                    box-shadow: 0 0 0 0.2rem $color-search-form-focus;
+                }
+            }
+
+            button.btn {
+                &:focus {
+                    box-shadow: none;
+                }
+            }
+        }
+    }
+}
+
+#sidebar {
+    position: fixed;
+    z-index: 9999;
+
+    nav.sidebar {
+        background-color: $color-white;
+        position: relative;
+        width: 250px;
+        height: 100vh;
+        left: -250px;
+
+        &.active {
+            left: 0px;
+        }
+
+        button.sidebar-toggler {
+            padding-left: 1rem;
+            position: absolute;
+            top: 50%;
+            right: -25px;
+            z-index: -1;
+
+            &:hover {
+                right: -30px;
+            }
+        }
+    }
+}
+
+.overlay {
+    display: none;
+
+    &.active {
+        display: block;
+        position: fixed;
+        width: 100vw;
+        height: 100vh;
+        background-color: $color-overlay;
+        z-index: 9998;
+    }
+}
+
+.banner {
+    margin-top: 76px;
+    height: 50vh;
+    background-image: url(../assets/placeholder.png);
+    background-size: cover;
+    background-position: center;
+}
+
+.container {
+    .card {
+        background-color: transparent;
+        border: none;
+
+        .card-img {
+            height: 100%;
+        }
+    }
+
+    #posts {
+        .card {
+            .card-body {
+                padding: 0 1.25rem;
+
+                .post_info_modify_btns {
+                    .post-info {
+                        margin-top: 5px;
+
+                        .dot {
+                            height: 5px;
+                            width: 5px;
+                            background-color: $color-dot;
+                            border-radius: 50%;
+                            display: inline-block;
+                        }
+                    }
+
+                    .modify-btns {
+                        // display: none;
+                    }
+                }
+
+                .read_more_category_badges {
+                    .read-more {
+                        //
+                    }
+
+                    .category-badges {
+                        img {
+                            &:not(:last-child) {
+                                margin-right: 0.6rem;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    #videos {
+        .card {
+            a.goto-video {
+                // text-decoration: none;
+                // color: $color-black;
+
+                .card-body {
+                    padding: 1.25rem 0 0 0;
+                }
+            }
+        }
+    }
+}
+
+// MEDIA QUERIES
+@media only screen and (max-width: 767px) {
+    nav.navbar {
+        .navbar-collapse {
+            .d-flex {
+                flex-direction: column !important;
+
+                ul.navbar-nav {
+                    margin-left: auto;
+                }
+
+                form.form-inline {
+                    .form-control {
+                        width: 100%;
+                    }
+                }
+            }
+        }
+    }
+
+    .container {
+        #posts {
+            .card {
+                .card-body {
+                    padding: 1.25rem 0;
+                }
+            }
+        }
+    }
+}
+
+@media only screen and (max-width: 510px) {
+    nav.navbar {
+        .auth-btns {
+            display: none;
+        }
+
+        .navbar-collapse {
+            .d-flex {
+                margin-top: 0;
+
+                .auth-btns {
+                    display: block;
+                }
+
+                ul.navbar-nav {
+                    margin-left: 0;
+                    flex-direction: column !important;
+
+                    li.nav-item {
+                        &.active {
+                            border-bottom: none !important;
+                            background-image: linear-gradient(
+                                to right,
+                                rgba($color-white, 0.2),
+                                transparent
+                            );
+                            border-left: 2px solid $color-white;
+                        }
+                    }
+                }
+
+                form.form-inline {
+                    .form-control {
+                        width: 100%;
+                    }
+                }
+            }
+        }
+    }
+
+    .container {
+        h1.section-title {
+            font-size: 2rem;
+        }
+    }
+}
+
+@media only screen and (max-width: 375px) {
+    .container {
+        h1.section-title {
+            font-size: 1.5rem;
+        }
+
+        #posts {
+            .card {
+                .card-body {
+                    .post_info_modify_btns {
+                        display: flex;
+                        flex-direction: column;
+                        text-align: center;
+
+                        .post-info {
+                            clear: both;
+                        }
+
+                        .modify-btns {
+                            clear: both;
+                            margin-top: 1rem;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media only screen and (max-width: 265px) {
+    .container {
+        #posts {
+            .card {
+                .card-body {
+                    .read_more_category_badges {
+                        display: flex;
+                        flex-direction: column-reverse;
+                        text-align: center;
+
+                        .read-more {
+                            clear: both;
+                            margin-top: 1rem;
+                        }
+
+                        .category-badges {
+                            clear: both;
+                            margin-top: 0 !important;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
